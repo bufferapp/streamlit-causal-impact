@@ -1,11 +1,12 @@
-import streamlit as st
-import pandas as pd
-from causalimpact import CausalImpact
 import datetime
+
+import pandas as pd
+import streamlit as st
+from causalimpact import CausalImpact
 
 st.title("Causal Impact")
 
-data = st.file_uploader("Upload", type={"csv"})
+data = st.file_uploader("Upload", type="csv")
 
 if data is not None:
     df = pd.read_csv(data)
